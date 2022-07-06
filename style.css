@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+/* 1. To center things on the screen, choose text-align: center; */
+  text-align: center;
+}
+
+h1 {
+/* 2. As long as the h1 is a full width block element, then aling items: center works. But if you adjust the h1 tag and maybe add a width of 10% then the elemeent is no longer a full width block element and therefore align items: center no longer works for the h1. Even though the body says text align center. */
+  /* width: 10%; */
+  margin-top: 0;
+/* 3. Another way of centering is by using the margin. If you say margin: auto that will center align your element. In this case we want the top and bottom to be auto and left and right to be auto. So we are going to remove the margin-top: 0, because we will change it in this new margin. */
+/* margin: 0 auto; */
+}
+
+.top-container {
+  background-color: #e4f9f5;
+/* 5. add a padding top to push all of the elements down. Then change the position to relative so that the position of the elements inside the top container are positioned according to the container instead of the body. */
+  padding-top: 100px;
+  position: relative;
+}
+
+.middle-container {
+  background-color: green;
+  width: 200px;
+  height: 200px;
+}
+
+.bottom-container {
+  background-color: purple;
+  width: 200px;
+  height: 200px;
+}
+
+/* 4. change the position of the bottom cloud so that it is no longer in the flow of the rest of the elements by changing the position to absolute. When you hit save and refresh you will see that the bottom cloud is now placed randomly on the screen over to the left of the screen and the mountain is in the center.  */
+
+.bottom-cloud {
+  position: absolute;
+/* 5d. Add a left margin of 300px and bottom margin of 300px */
+left: 300px;
+bottom: 300px;
+}
+
+/* 5b. After you add the top container position to relative and some padding to the top to push down the entire container, set the position of the top cloud to absolute. (Hit save and refresh). Notice that the top coloud is now placed randomly on the screen, in front of the H1    */
+
+.top-cloud {
+  position: absolute;
+  /* 5e. Add a right margin of 300px and bottom margin of 50px */
+  right: 300px;
+  top: 50px;
+}
